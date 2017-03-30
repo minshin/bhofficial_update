@@ -1,6 +1,0 @@
-plugin:
-    name: 'yang.tester::lang.plugin.name'
-    description: 'yang.tester::lang.plugin.description'
-    author: yang
-    icon: oc-icon-adjust
-    homepage: ''

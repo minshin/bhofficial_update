@@ -22,7 +22,7 @@ class Post extends Model
 
     public $table = 'rainlab_blog_posts';
     public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
-
+    public $visits;
     /*
      * Validation
      */

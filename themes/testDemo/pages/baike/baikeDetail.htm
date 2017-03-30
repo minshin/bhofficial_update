@@ -8,8 +8,9 @@ hidden="0"
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav" style="margin-top:60px;">
-{% set type =['洗牙','种牙']%}
-  {% content 'breadNav' type=type[0] %}
+{% set type =[{'title':'网站首页','isHref':'/home'},{'title':'服务项目','isHref':'/serviceList'},{'title':'洗牙','isHref':false}] %}
+
+  {% partial 'breadNav' types=type %}
 </div>
 <!-- 面包屑导航end -->
 

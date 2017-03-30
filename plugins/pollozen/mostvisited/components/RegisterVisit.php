@@ -19,9 +19,9 @@ class RegisterVisit extends ComponentBase
         return [];
     }
     public function onRun(){
-        if($this->page[ 'post' ]){
-            if($this->page[ 'post' ]->id){
-                $idPost = $this->page[ 'post' ]->id;
+        if($this->page[ 'thepost' ]){
+            if($this->page[ 'thepost' ]->id){
+                $idPost = $this->page[ 'thepost' ]->id;
                 $today = Carbon::today();
                 $visit = new Visits;
                 $visit = $visit->firstOrCreate(['post_id'=>$idPost, 'date'=>$today]);

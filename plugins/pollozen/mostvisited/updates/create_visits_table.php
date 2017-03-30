@@ -1,14 +1,13 @@
 <?php namespace PolloZen\MostVisited\Updates;
 
 use Schema;
-use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
 class CreateVisitsTable extends Migration
 {
     public function up()
     {
-        Schema::create('pollozen_mostvisited_visits', function(Blueprint $table)
+        Schema::create('pollozen_mostvisited_visits', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');

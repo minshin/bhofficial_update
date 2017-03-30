@@ -3,17 +3,27 @@ url="/doctorteam"
 layout="second"
 description=""
 hidden="0"
+
+[articlebohelist]
 ==
+
+{% set doctorlists = articlebohelist.posts %} 
+
+{% if doctorlists.count ==2 %}
+111
+{% endif %}
 <!-- 顶部背景图begin -->
 <div id="topBg">
-{% partial 'baike/topBg' %}
+{% set topContent={'title1':'您身边的牙医朋友','title2':'Your dentist friend','title3':'和更多优秀的牙医在一起 With more good dentists','imgSrc':'doctorTopBg.png','position':'left'} %}
+
+{% partial 'baike/topBg' topContent=topContent %}
 
 </div>
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav">
-  {% set type =['洗牙','种牙'] %}
-  {% content 'breadNav' type=type[0] %}
+  {% set type =[{'title':'网站首页','isHref':'/home'},{'title':'薄荷牙医','isHref':'/home'},{'title':'口腔种植','isHref':false}] %}
+  {% partial 'breadNav' types=type %}
 
 </div>
 <!-- 面包屑导航end -->
@@ -21,8 +31,11 @@ hidden="0"
 <!-- 服务项目导航begin -->
 
 <div id="seviceList">
+
+
   {% set type='doctor' %}
-  {% partial 'index/serviceList' type=type %}
+{% set typeItems=['口腔种植','牙齿正畸','美容修复','儿童口腔','牙周治疗'] %}
+  {% partial 'index/serviceList' type=type typeItems=typeItems lists=doctorlists %} 
 </div>
 
 <!-- 服务项目导航end -->

@@ -4,6 +4,9 @@
 
 columns:
 
+    id:
+        label: 'id'
+        searchable: true
     title:
         label: rainlab.blog::lang.post.title
         searchable: true

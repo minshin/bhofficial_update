@@ -1,8 +1,0 @@
-columns:
-    name:
-        label: 'yang.test::lang.name'
-        type: text
-        searchable: true
-    state:
-        label: 'yang.test::lang.state'
-        type: number

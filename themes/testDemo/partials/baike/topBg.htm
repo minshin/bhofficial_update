@@ -1,16 +1,35 @@
 
 
 
-<div class="topContainer" style="position:relative;">
+
+
+<div class="topContainer" style="position:relative;margin-top:50px;">
   <div class="overlay">
   <div class="container-fluid bgImg">
-      <img src="{{ 'assets/img/serviceTopbg.png'|theme }}" style="width:100%;background-size:cover;" alt="">
+      <img src="{{ ('assets/img/topBg/'~topContent.imgSrc)|theme }}" style="width:100%;background-size:cover;" alt="">
   </div>
   <div class="container contentArea">
-  <div class="title">
-    <h2 class="animated bounceInLeft">追求卓越&nbsp;尽善尽美</h2>
+
+   {% if topContent.position=='left' %}
+   <div class="title" style="left:20%;">
+ <!-- <div class="row">
+   <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-7"> -->
+     {% elseif topContent.position=='right' %}
+     <div class="title" style="color:#fff;right:10%;">
+   <!-- <div class="row">
+     <div class="col-lg-offset-6 col-md-offset-5 col-md-7 col-lg-5" style="color:#fff;"> -->
+       {% elseif topContent.position=='center' %}
+   {% endif %}
+
+    <h2 class="animated bounceInLeft">{{ topContent.title1 }}</h2>
+    <p class="animated bounceInRight">{{ topContent.title2 }}</p>
+    <p class="animated bounceInLeft">{{ topContent.title3 }}</p>
+
+  </div>
+</div>
+    <!-- <h2 class="animated bounceInLeft">追求卓越&nbsp;尽善尽美</h2>
     <p class="animated bounceInRight">Pursuit of execellence</p>
-    <p class="animated bounceInLeft">Make all-out efforts</p>
+    <p class="animated bounceInLeft">Make all-out efforts</p> -->
   </div>
     </div>
     </div>

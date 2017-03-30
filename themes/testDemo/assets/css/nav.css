@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.navbar-default .nav li a {
+
+  color: #000;
+}
+
+.navbar-default {
+
+  background-color: #fff;
+}

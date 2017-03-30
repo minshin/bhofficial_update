@@ -1,0 +1,13 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: bohe.article::lang.type.name
+        searchable: true
+
+    post_count:
+        label: bohe.article::lang.type.posts
+        sortable: false

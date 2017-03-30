@@ -2,6 +2,7 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
+use ApplicationException;
 
 class Index extends Controller
 {
@@ -13,5 +14,13 @@ class Index extends Controller
     public function __construct()
     {
         parent::__construct();
+        BackendMenu::setContext('Bohe.Article', 'article', 'index');
+    }
+    public function create()
+    {
+    	BackendMenu::setContextSideMenu('types');
+ 
+  
+    	return $this->asExtension('FormController')->create();
     }
 }

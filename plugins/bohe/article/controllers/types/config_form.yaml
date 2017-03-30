@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: bohe.article::lang.type.create_category
+form: ~/plugins/bohe/article/models/type/fields.yaml
+modelClass: Bohe\Article\Models\Type
+defaultRedirect: bohe/article/types
+
+create:
+    redirect: bohe/article/types/update/:id
+    redirectClose: bohe/article/types
+
+update:
+    redirect: bohe/article/types
+    redirectClose: bohe/article/types

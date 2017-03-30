@@ -1,0 +1,21 @@
+
+
+
+
+<div class="breadNav" style="border-bottom:1px solid #eff5f6;padding-bottom:10px;background-color:rgb(231,240,242);">
+<div class="wrap" style="background-color:#fff;padding:0;margin:0;border-radius:0;width:100%;">
+
+<div class="container">
+<ul class="breadcrumb" style="background-color:#fff;margin-bottom:0;">
+  {% for type in types %}
+  {% if type.isHref %}
+   <li><a href="{{ type.isHref }}" style="color:#000;">{{ type.title }}</a> <span class="divider"></span></li>
+   {% else %}
+  <li class="active">{{ type.title }}</li>
+  {% endif %}
+  {% endfor %}
+</ul>
+</div>
+
+</div>
+</div>

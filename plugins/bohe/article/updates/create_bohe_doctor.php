@@ -16,7 +16,6 @@ class CreateBoheDoctor extends Migration
             $table->string('jobtitle')->nullable();
             $table->string('skilledin')->nullable();
             $table->longText('introduce')->nullable();
-            $table->string('type')->nullable();
             $table->integer('level')->nullable();
             $table->boolean('state')->default(true);
             $table->string('url')->nullable();

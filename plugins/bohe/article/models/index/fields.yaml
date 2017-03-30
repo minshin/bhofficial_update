@@ -31,10 +31,9 @@ fields:
         
     skilledin:
             label: '擅长领域' 
-    type:
-            label: '类别'
-            span: left
-            type: checkboxlist
+    types:
+            type: relation
+            label: ' 医生标签' 
              
 
 

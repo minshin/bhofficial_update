@@ -5,22 +5,25 @@ description=""
 hidden="0"
 ==
 
+
+
 <!-- 顶部背景图begin -->
 <div id="topBg">
-{% partial 'baike/topBg' %}
+  {% set topContent={'title1':'名医解答给你专 业的解决方案','title2':'Famous doctor answer to you ','title3':'Industry solutions','imgSrc':'qustionTopBg.png','position':'left'} %}
+
+{% partial 'baike/topBg' topContent=topContent %}
 </div>
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav">
-{% set type =['洗牙','种牙']%}
-  {% content 'breadNav' type=type[0] %}
+  {% set type =[{'title':'网站首页','isHref':'/home'},{'title':'快速预约','isHref':'/home'},{'title':'预约流程','isHref':false}] %}
+  {% partial 'breadNav' types=type %}
 </div>
 <!-- 面包屑导航end -->
 
 <!-- 预约流程begin -->
 
 <div id="yuyueContent">
-
   {% partial 'quickYuyue/yuyueContent' %}
 </div>
 

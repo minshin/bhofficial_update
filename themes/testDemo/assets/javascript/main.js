@@ -30,7 +30,7 @@ $(function(){
   bloggingisotope();
   $(window).smartresize(bloggingisotope)
 
-  
+
   //滚动时 动画
   new WOW().init();
 
@@ -39,15 +39,20 @@ $(function(){
 //滚动导航栏监听
 $(window).scroll(function () {
 
-  if($('#myCarousel').offset()){
-    var menu_top = $('#myCarousel').offset().top;
+  if($('#bootstrap-touch-slider').offset()){
+    var menu_top = $('#bootstrap-touch-slider').offset().top;
     if ($(window).scrollTop() >= menu_top+50){
      $('.navbar-default').css({'backgroundColor':'#fff'});
+      $('.navbar-default .nav li a').css({'color':'#000'});
+      $('.navbar-brand img').attr({'src':'/themes/testDemo/assets/img/brand.png'});
+
 
     }
     else {
 
             $('.navbar-default').css({'backgroundColor':'rgba(255,255,255,.02)'});
+              $('.navbar-default .nav li a').css({'color':'#fff'});
+                $('.navbar-brand img').attr({'src':'/themes/testDemo/assets/img/brandwhite.png'});
     }
   }
 });
