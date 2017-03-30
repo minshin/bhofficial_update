@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* ---------------------------------------------------------------------------- */
+/* ------------------------------------Html-Body------------------------------- */
+/* ---------------------------------------------------------------------------- */
+html, body {width:100%; padding:0; margin:0;}
+body {background: #ffffff; color: #333333;font-size: 16px; font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+html { -webkit-text-size-adjust: none;}
+.video embed,.video object,.video iframe { width: 100%;  height: auto;}
+img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
+
+a{color: #fff;text-decoration: none;}
+a:hover {color:#206477; text-decoration: none;}
+ul,li {
+  list-style: none;
+  padding: 0;
+
+}
+.left {float: left;}
+.right {float: right;}
+a:hover {
+text-decoration:none;
+}
+h1 {font-size: 55px;}
+h2 {font-size: 45px;}
+h3 {font-size: 40px;color:#26778a;}
+h4 {font-size: 25px;}
+h5 {font-size: 20px;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   /*text-transform: uppercase;*/
+   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+   /*font-weight: 700;*/
+}
+
+p{letter-spacing:1.5px;}
+
+textarea {
+resize: none;
+}
+
+
+.center{text-align: center; margin: 0 auto;}
+.f-right{float: right;}
+.f-left{float: left;}
+.t-right{text-align: right;}
+.t-left{text-align: left;}
+
+.clear{content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:after, .clearfix:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
+
+.copyrights{
+ text-indent:-9999px;
+ height:0;
+ line-height:0;
+ font-size:0;
+ overflow:hidden;
+}
+/* --Line-- */
+
+/*hr.line01,
+hr.line02 { margin: 15px auto; padding: 0; max-width: 250px;border: 0; border-top: solid 5px;text-align: center;}
+
+hr.line01:after{content: url(../images/skull1.png);display: inline-block;position: relative;top: -.8em;padding: 0 .25em;font-family: FontAwesome;font-size: 2em;}
+hr.line02:after {content: url(../images/skull.png);display: inline-block;position: relative;top: -.8em;padding: 0 .25em;font-family: FontAwesome;font-size: 2em;}
+
+hr.line01 {border-color: #fffff;}
+hr.line01:after {color: #fffff;background-color: #E7E7E7;}
+
+hr.line02 {border-color: #FBCC0A;}
+hr.line02:after {color: #FBCC0A;background-color: #ffffff;}*/

@@ -1,0 +1,17 @@
+title = "Blog"
+url = "/blog/:page?"
+layout = "my"
+
+[blogPosts]
+postsPerPage = "5"
+postPage = "blogpost"
+==
+<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'blog-posts.htm' %}
+           </main>
+       </div>
+   </div>
+</section>

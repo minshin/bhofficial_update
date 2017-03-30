@@ -1,0 +1,431 @@
+
+
+
+
+
+{% set type=type %}
+{% set types=['1','1','1','1','1','1','1','1'] %}
+{% set items=['洗牙','美白','补牙','种牙','正畸','镶牙','儿童口腔','口腔检查'] %}
+
+
+
+<div id="seviceNav" class="seviceNav">
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-12 text-left">
+          <ul class="schedule">
+            <!-- {% for item in items %}
+            <li><a href="#" class="{{ '1' ? 'active' : 'No' }}" data-sched="sunday">{{item}}</a></li>
+            {% endfor %} -->
+            {% for key, item in items %}
+            {% if key==0 %}
+        <li><a href="#" class="active" data-sched="sunday">{{item}}</a></li>
+        {% else %}
+        <li><a href="#" class="" data-sched="sunday">{{item}}</a></li>
+       {% endif %}
+    {% endfor %}
+          </ul>
+        </div>
+      </div>
+      </div>
+      </div>
+
+
+      <div class="container">
+      <div class="col-md-12 schedule-container">
+
+         {% if type=='baike' %}
+
+            <div class="schedule-content active" data-day="sunday">
+              {% for type in types %}
+
+              <div class="rowItem">
+             <div class="schedule-contentBg">
+
+               <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6" style="padding:20px 0;">
+               <div class="contentLeft">
+                 <img src="{{ 'assets/img/img2.jpg'|theme }}" alt="" class="img-responsive">
+                 </div>
+               </div>
+         </div>
+               <div class="col-lg-8 col-md-8 col-sm-7 col-xs-6" style="padding:20px;">
+               <div class="contentRight">
+                 <h4>你可能送了“假”的首饰</h4>
+                 <p class="p1">2017/3/14</p>
+                 <p>216</p>
+                 <p>又到了一年一度的情(da)人(chu)节(xue)了，除了俗气的花花草草巧克力，除了“治百病”的包包，难道就没有别的方式表达爱</p>
+                   <a href="#" role="button" class="btn btn-default" style="">详情</a>
+               </div>
+                 </div>
+                 <div class="clearfix">
+
+                 </div>
+                 </div>
+
+                {% endfor %}
+              </div>
+
+                    {%  elseif type=='doctor' %}
+                    <div class="schedule-content active" data-day="sunday">
+                    <div class="container">
+                  {% for type in types %}
+                    <div class="row">
+                      <div class="col-lg-6 col-md-7 col-sm-7 col-xs-10" style="padding:0;margin:0">
+                        <div class="div1">
+                       <img src="{{ 'assets/img/img11.jpg'|theme }}" alt="" class="">
+                          <div class="div1Right">
+                          <h4>南哲</h4>
+                          <h5>北京大学口腔医学博士</h5>
+                          <p>擅长领域：牙槽外科</p>
+                          <br />
+                          <p>简介：这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-8" style="padding:0;margin:0;margin-left:-15px;">
+                        <div class="div2" style="">
+                          <div class="dateTop clearfix">
+                            <p>上午</p>
+                            <ul>
+                              <li><a>09:30</a></li>
+                              <li><a>10:00</a></li>
+                              <li><a class="active">10:30</a></li>
+                              <li><a class="active">11:00</a></li>
+                              <li><a class="active">11:30</a></li>
+                              <li><a>12:00</a></li>
+                            </ul>
+                          </div>
+                          <div class="dateBottom clearfix">
+                            <p>下午</p>
+                            <ul>
+                              <li><a>13:00</a></li>
+                              <li><a class="active">13:30</a></li>
+                              <li><a class="active">14:00</a></li>
+                              <li><a class="active">14:30</a></li>
+                              <li><a class="active">15:00</a></li>
+                              <li><a class="active">15:30</a></li>
+                              <li><a>16:00</a></li>
+                              <li><a class="active">16:30</a></li>
+                              <li><a>17:00</a></li>
+                              <li><a>17:30</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-2 col-md-1 col-sm-1 col-xs-4" style="padding:0;margin:0">
+                        <div class="div3 text-center clearfix" style="">
+                          <img src="{{ 'assets/img/erweima.png'|theme }}" alt=" img-responsive">
+                          <p>扫描微信二维码预约</p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                    </div>
+                  </div>
+                    {% elseif type=='service' %}
+                      <div class="schedule-content active" data-day="sunday">
+                      <div class="container">
+                          <div class="row">
+                      {% for type in types %}
+
+                      <div class="col-md-4 col-sm-4 col-xs-6" style="margin-top:20px;">
+                        <div class="" style="width:100%">
+                          <img src="{{ 'assets/img/pubuliu/2.jpg'|theme }}" style="width:100%" alt="">
+                         <h5>超声波洗牙 | Ultrasonic scaling</h5>
+                         <p>洗牙是通过超声波的高频率震荡作用去除牙石、菌斑和色泽并磨光牙面，以延迟菌斑和牙石的再沉积。</p>
+                        </div>
+                        <div class="clearfix">
+
+                        </div>
+                      </div>
+                    {% endfor %}
+                      </div>
+                      </div>
+                      </div>
+                    {% endif %}
+
+              </div>
+              </div>
+
+<!-- <div id="seviceNav" class="seviceNav">
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-10 text-left">
+          <ul class="schedule">
+            <li><a href="#" class="active" data-sched="sunday">Sunday</a></li>
+            <li><a href="#" data-sched="monday">Monday</a></li>
+            <li><a href="#" data-sched="tuesday">Tuesday</a></li>
+            <li><a href="#" data-sched="wednesday">Wednesday</a></li>
+            <li><a href="#" data-sched="thursday">Thursday</a></li>
+            <li><a href="#" data-sched="monday">Monday</a></li>
+            <li><a href="#" data-sched="saturday">Saturday</a></li>
+          </ul>
+        </div>
+          </div>
+            </div>
+              </div>
+
+
+          <div class="container">
+          <div class="col-md-12 schedule-container">
+
+            <div class="schedule-content active" data-day="sunday">
+               <div class="rowItem">
+              <div class="schedule-contentBg">
+
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6" style="padding:20px 0;">
+                <div class="contentLeft">
+                  <img src="{{ 'assets/img/img2.jpg'|theme }}" alt="" class="img-responsive">
+                  </div>
+                </div>
+          </div>
+                <div class="col-lg-8 col-md-8 col-sm-7 col-xs-6" style="padding:20px;">
+                <div class="contentRight">
+                  <h3>超声波洗牙 | Ultrasontic scaling</h3>
+                  <p>2017/3/14</p>
+                  <p>这是洗牙描述这是洗牙描述这是洗牙描述这是洗牙描述这是洗牙描述这是洗牙描述</p>
+                    <a href="#" role="button" class="btn btn-default" style="">详情</a>
+                </div>
+                  </div>
+                  <div class="clearfix">
+
+                  </div>
+                  </div>
+
+
+
+                  <div class="rowItem">
+                 <div class="schedule-contentBg">
+
+                   <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6" style="padding:20px 0;">
+                   <div class="contentLeft">
+                     <img src="{{ 'assets/img/img2.jpg'|theme }}" alt="" class="img-responsive">
+                     </div>
+                   </div>
+                 </div>
+                   <div class="col-lg-8 col-md-8 col-sm-7 col-xs-6" style="padding:20px;">
+                   <div class="contentRight">
+                     <h3>超声波洗牙 | Ultrasontic scaling</h3>
+                     <p>2017/3/14</p>
+                     <p>这是洗牙描述这是洗牙描述这是洗牙描述这是洗牙描述这是洗牙描述这是洗牙描述</p>
+                       <a href="#" role="button" class="btn btn-default" style="">详情</a>
+                   </div>
+                     </div>
+                     <div class="clearfix">
+
+                     </div>
+                     </div>
+
+              </div>
+ -->
+
+            <!-- </div> -->
+            <!-- END sched-content -->
+
+            <!-- <div class="schedule-content" data-day="monday">
+
+{% if type=='doctor' %}
+<div class="container">
+
+<div class="row">
+  <div class="col-md-7 col-sm-7 col-xs-10" style="padding:0;margin:0">
+    <div class="div1">
+   <img src="{{ 'assets/img/img11.jpg'|theme }}" alt="" class="">
+      <div class="div1Right">
+      <h3>南哲</h3>
+      <h5>北京大学口腔医学博士</h5>
+      <p>擅长领域：牙槽外科</p>
+      <br />
+      <p>简介：这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-8" style="padding:0;margin:0">
+    <div class="div2" style="">
+      <div class="dateTop clearfix">
+        <p>上午</p>
+        <ul>
+          <li><a>9:30</a></li>
+          <li><a>9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a>9:30</a></li>
+          <li><a class="active">9:30</a></li>
+        </ul>
+      </div>
+      <div class="dateBottom clearfix">
+        <p>下午</p>
+        <ul>
+          <li><a>9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a>9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a>9:30</a></li>
+          <li><a class="active">9:30</a></li>
+          <li><a>9:30</a></li>
+        </ul>
+      </div>
+  </div>
+  </div>
+  <div class="col-md-2 col-sm-2 col-xs-4" style="padding:0;margin:0">
+    <div class="div3 text-center clearfix" style="">
+      <img src="{{ 'assets/img/erweima.png'|theme }}" alt=" img-responsive">
+      <p>扫描微信二维码预约</p>
+    </div>
+  </div>
+</div>
+<hr />
+</div>
+{% else %}
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-6" style="margin:20px auto">
+    <div class="" style="width:100%">
+      <img src="{{ 'assets/img/pubuliu/2.jpg'|theme }}" style="width:100%" alt="">
+     <h4>超声波洗牙 | Ultrasonic scaling</h4>
+     <p>这是洗牙的好处这是洗牙的好处这是洗牙的好处</p>
+    </div>
+    <div class="clearfix">
+
+    </div>
+  </div> -->
+
+
+  <!-- <div class="col-md-4 col-sm-4 col-xs-6" style="margin:20px auto">
+    <div class="" style="width:100%">
+      <img src="{{ 'assets/img/pubuliu/2.jpg'|theme }}" style="width:100%" alt="">
+     <h4>超声波洗牙 | Ultrasonic scaling</h4>
+     <p>这是洗牙的好处这是洗牙的好处这是洗牙的好处</p>
+    </div>
+    <div class="clearfix">
+
+    </div>
+  </div> -->
+
+
+  <!-- <div class="col-md-4 col-sm-4 col-xs-6" style="margin:20px auto">
+    <div class="" style="width:100%">
+      <img src="{{ 'assets/img/pubuliu/2.jpg'|theme }}" class="img-responsive" style="width:100%" alt="">
+     <h4>超声波洗牙 | Ultrasonic scaling</h4>
+     <p>这是洗牙的好处这是洗牙的好处这是洗牙的好处</p>
+    </div>
+    <div class="clearfix">
+
+    </div>
+  </div>
+</div>
+{% endif%}
+</div> -->
+            <!-- END sched-content -->
+
+            <!-- <div class="schedule-content" data-day="tuesday">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7 col-sm-7 col-xs-10" style="padding:0;margin:0">
+                    <div class="div1">
+                   <img src="{{ 'assets/img/img11.jpg'|theme }}" alt="" class="">
+                      <div class="div1Right">
+                      <h3>南哲</h3>
+                      <h5>北京大学口腔医学博士</h5>
+                      <p>擅长领域：牙槽外科</p>
+                      <br />
+                      <p>简介：这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-8" style="padding:0;margin:0">
+                    <div class="div2" style="">
+                      <div class="dateTop clearfix">
+                        <p>上午</p>
+                        <ul>
+                          <li><a>9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                        </ul>
+                      </div>
+                      <div class="dateBottom clearfix">
+                        <p>下午</p>
+                        <ul>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-md-2 col-sm-2 col-xs-4" style="padding:0;margin:0">
+                    <div class="div3 text-center clearfix" style="">
+                      <img src="{{ 'assets/img/erweima.png'|theme }}" alt=" img-responsive">
+                      <p>扫描微信二维码预约</p>
+                    </div>
+                  </div>
+              </div>
+                <hr />
+                <div class="row">
+                  <div class="col-md-7 col-sm-7 col-xs-10" style="padding:0;margin:0">
+                    <div class="div1">
+                   <img src="{{ 'assets/img/img11.jpg'|theme }}" alt="" class="">
+                      <div class="div1Right">
+                      <h3>南哲</h3>
+                      <h5>北京大学口腔医学博士</h5>
+                      <p>擅长领域：牙槽外科</p>
+                      <br />
+                      <p>简介：这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介这是个人简介</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3 col-xs-8" style="padding:0;margin:0">
+                    <div class="div2" style="">
+                      <div class="dateTop clearfix">
+                        <p>上午</p>
+                        <ul>
+                          <li><a>9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                        </ul>
+                      </div>
+                      <div class="dateBottom clearfix">
+                        <p>下午</p>
+                        <ul>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                          <li><a class="active">9:30</a></li>
+                          <li><a>9:30</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="col-md-2 col-sm-2 col-xs-4" style="padding:0;margin:0">
+                    <div class="div3 text-center clearfix" style="">
+                      <img src="{{ 'assets/img/erweima.png'|theme }}" alt=" img-responsive" style="padding-left:-5px;">
+                      <p>扫描微信二维码预约</p>
+                    </div>
+                  </div>
+              </div>
+              <hr />
+              </div>
+
+            </div> -->
+            <!-- END sched-content -->
+
+           <!-- </div>
+            </div> -->

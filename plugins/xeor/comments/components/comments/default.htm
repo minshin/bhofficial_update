@@ -1,0 +1,63 @@
+{% set comments = __SELF__.comments %}
+{% set userId = __SELF__.userId %}
+{% set depth = __SELF__.depth %}
+{% set rate = __SELF__.options.rate %}
+
+<div class="container">
+    <h3>Comments</h3>
+    <div id="message-wrapper" class="alert alert-info alert-dismissible fade in" role="alert" style="display: none;">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+        </button>
+        <span class="message created success" style="display: none">Your comment has been posted!</span>
+        <span class="message updated success" style="display: none">Your comment has been updated!</span>
+    </div>
+
+    <div id="comments"
+    {% for key, value in __SELF__.options %}
+        data-{{ key }}="{{ value }}"
+    {% endfor %}>
+
+        {% partial __SELF__ ~ "::comments" comment=comment userId=userId depth=depth rate=rate %}
+
+    </div>
+
+    <h3>Leave a Comment:</h3>
+    <div id="comment-form-wrapper">
+        <form id="comment-form"
+              class="comment-form"
+              data-request="onComment"
+              data-request-update="'{{ __SELF__ }}::comment': '@#loader'"
+              role="form">
+            {% if userId == 0 %}
+                <div class="form-group">
+                    <input type="text" id="name" name="name" value="" placeholder="Name" class="name form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="mail" name="mail" value="" placeholder="Email" class="mail form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="homepage" name="homepage" placeholder="Homepage" value="" class="homepage form-control">
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <textarea name="content" id="content" class="content form-control" rows="3"></textarea>
+            </div>
+
+            <input type="hidden" name="parent_id" id="to" class="to">
+            <input type="hidden" name="id" id="edit" class="edit">
+            <input type="hidden" name="level" id="level" class="level">
+
+            <div class="form-group form-submit">
+                <input type="submit" class="btn btn-primary" value="Send">
+            </div>
+
+            <div class="cancel-reply">
+                <a href="#" class="cancel btn btn-default">Cancel</a>
+            </div>
+
+            <div class="clear"></div>
+        </form>
+    </div>
+
+    <div id="loader" style="display: none"></div>
+</div>

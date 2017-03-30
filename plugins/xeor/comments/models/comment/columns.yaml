@@ -1,0 +1,37 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: xeor.comments::lang.backend.author
+        type: partial
+        path: $/xeor/comments/models/comment/_author.htm
+        searchable: false
+
+    content:
+        label: xeor.comments::lang.backend.content
+        searchable: true
+        sortable: false
+
+    published:
+        label: xeor.comments::lang.backend.published
+        type: switch
+        sortable: false
+
+    created_at:
+        label: xeor.comments::lang.backend.created
+        type: datetime
+        sortable: true
+
+    operations:
+        label: xeor.comments::lang.backend.operations
+        type: partial
+        path: ~/plugins/xeor/comments/models/comment/_operations.htm
+        sortable: false
+
+    hostname:
+        searchable: true
+        invisible: true
+

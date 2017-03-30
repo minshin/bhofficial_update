@@ -1,0 +1,10 @@
+columns:
+    id:
+        label: id
+        type: number
+    pic:
+        label: pic
+        type: text
+    state:
+        label: state
+        type: switch

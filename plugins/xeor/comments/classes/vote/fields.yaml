@@ -1,0 +1,11 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    type:
+        type: dropdown
+        options:
+            point: xeor.comments::lang.settings.comments_rate_type_number
+            percent: xeor.comments::lang.settings.comments_rate_type_fivestar

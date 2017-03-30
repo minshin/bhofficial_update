@@ -1,0 +1,6 @@
+plugin:
+    name: 'tang.product::lang.plugin.name'
+    description: 'tang.product::lang.plugin.description'
+    author: tang
+    icon: oc-icon-coffee
+    homepage: ''

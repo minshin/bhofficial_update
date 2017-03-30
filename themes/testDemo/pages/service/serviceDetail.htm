@@ -1,0 +1,22 @@
+title="薄荷牙医-您身边的牙医专家"
+url="/serviceDetail"
+layout="second"
+description=""
+hidden="0"
+==
+
+<!-- 顶部背景图end-->
+<!-- 面包屑导航begin -->
+<div id="breadNav" style="margin-top:60px;">
+{% set type =['洗牙','种牙']%}
+  {% content 'breadNav' type=type[0] %}
+</div>
+<!-- 面包屑导航end -->
+
+<!-- 百科详情区域 begin -->
+
+<div id="serviceDetail">
+  {% partial 'baike/serviceDetailTop' %}
+</div>
+
+<!-- 百科详情区域 end -->

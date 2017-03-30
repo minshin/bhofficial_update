@@ -1,0 +1,80 @@
+title="testSecond"
+url="/home"
+layout="second"
+description="我是second页面"
+hidden="0"
+==
+
+<!-- 轮播图begin -->
+<div id="carousel">
+  {% partial 'index/carousel' %}
+</div>
+<!-- 轮播图 end -->
+
+  <!-- 快速预约begin -->
+  <div id="quickYuyue">
+  {% partial 'index/quickYuyue'%}
+  </div>
+  <!-- 快速预约end -->
+
+  <!-- 薄荷医生begin -->
+  <div id="boheDoctor">
+    {% partial 'index/boheDoctor' %}
+  </div>
+
+  <!-- 薄荷医生end -->
+
+
+
+  <!-- 服务项目begin -->
+<div id="service">
+
+{% partial 'index/service' %}
+</div>
+
+  <!-- 服务项目end -->
+
+
+<!-- 公司简介beigin -->
+<div id="companyIntro">
+  {% partial 'index/companyIntro' %}
+</div>
+
+<!-- 公司简介end -->
+<!-- 薄荷百科begin -->
+<div id="bohebaike">
+  {% partial 'index/baike' %}
+</div>
+<!-- 薄荷百科end -->
+
+
+<!-- 合作企业begin -->
+<div id="cooperate">
+{% partial 'index/operateCompany' %}
+</div>
+<!-- 合作企业end -->
+
+
+
+
+
+<!-- 面包屑导航begin -->
+<!-- <div id="breadNav">
+{% set type =['洗牙','种牙']%}
+  {% content 'breadNav' type=type[0] %}
+
+</div> -->
+<!-- 面包屑导航end -->
+
+<!-- 服务项目导航begin -->
+
+<!-- <div id="seviceList">
+  {% partial 'index/serviceList' %}
+</div> -->
+
+<!-- 服务项目导航end -->
+
+<!-- 首页底部 begin -->
+<div id="homeBottom">
+    {% partial 'index/homeBottom' %}
+</div>

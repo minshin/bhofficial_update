@@ -1,0 +1,8 @@
+0.5.1:
+    - First Version (used {{ Gallery.View }} )
+0.5.8:
+    - Draggable components and multiple gallerys on one page
+0.5.9:
+    - Changed the icon of the gallery plugin.
+0.6.1:
+    - Minor code changes for better plugin folder detection and js styles.

@@ -1,0 +1,6 @@
+plugin:
+    name: 'jollen.article::lang.plugin.name'
+    description: 'jollen.article::lang.plugin.description'
+    author: jollen
+    icon: oc-icon-adjust
+    homepage: ''

@@ -1,0 +1,34 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+    featured_images:
+        label: 'image'
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200
+    title:
+        label: '标题'
+        span: left
+        placeholder: '标题'
+
+    content:
+        label: '内容'
+        type: Bohe\Service\FormWidgets\BlogMarkdown
+        cssClass: field-slim blog-post-preview
+        mode: split  
+        
+    state:
+            label: '状态'
+            span: auto
+            type: switch
+             
+
+
+           
+
+
+
+

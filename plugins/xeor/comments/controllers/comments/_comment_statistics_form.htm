@@ -1,0 +1,52 @@
+<?= Form::open() ?>
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+    <h4 class="modal-title">
+        <?= e(trans('xeor.comments::lang.backend.statistics_comment')) ?>
+        <span style="color: #ccc">ID: <?= $commentId ?></span>
+    </h4>
+</div>
+
+<?php if (!$this->fatalError): ?>
+
+<div class="modal-body">
+    <div id="chart">
+        <?= $this->makePartial('~/plugins/xeor/comments/models/vote/_chart.htm', ['sizes' => $sizes]) ?>
+    </div>
+    <?= $widget->render() ?>
+</div>
+<div class="modal-footer">
+    <button data-request="onUpdateRateType"
+            data-request-data="type: $('#Form-comment<?= $commentId ?>-field-Vote-type').val()"
+            data-request-success="$('#chart').replaceWith(data.partial)"
+            type="button"
+            class="btn btn-primary">
+        <?= e(trans('xeor.comments::lang.backend.update')) ?>
+    </button>
+
+    <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="popup">
+        <?= e(trans('backend::lang.form.cancel')) ?>
+    </button>
+</div>
+
+<?php else: ?>
+
+<div class="modal-body">
+    <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
+</div>
+<div class="modal-footer">
+    <button
+            type="button"
+            class="btn btn-default"
+            data-dismiss="popup">
+        <?= e(trans('backend::lang.form.close')) ?>
+    </button>
+</div>
+
+<?php endif ?>
+
+<?= Form::close() ?>

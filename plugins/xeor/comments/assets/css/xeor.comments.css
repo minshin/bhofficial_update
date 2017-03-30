@@ -1,0 +1,144 @@
+/* Main */
+
+#comments,
+#comment-form-wrapper
+{
+    width: 768px;
+}
+
+#comments
+{
+    margin: 40px 0;
+}
+
+#comments .indented {
+    margin-left: 25px;
+}
+
+#comments .comment
+{
+    margin-top: 0;
+}
+
+#comments .comment form#comment-form
+{
+    max-width: 320px;
+    margin-top: 20px;
+}
+
+#comments .comment h4 .user-name
+{
+    font-weight: bold;
+}
+
+#comments .comment .action-link
+{
+    margin-right: 10px;
+}
+
+#comments .comment .level
+{
+    margin: 20px 0px 0px 20px
+}
+
+#comment-form .cancel-reply
+{
+    display: none;
+    float: right;
+}
+
+/* Form */
+
+#comment-form .form-submit {
+    float: left;
+}
+
+#comments .comment-number-widget
+{
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Rate */
+
+#comments .comment-number-widget .arrow-up,
+#comments .comment-number-widget .arrow-down
+{
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    text-decoration: none;
+    background-size: 100% !important;
+}
+
+#comments .comment-number-widget .arrow-up
+{
+    background: url(../images/up.svg) 0 0 no-repeat;
+}
+
+#comments .comment-number-widget .arrow-down
+{
+    background: url(../images/down.svg) 0 0 no-repeat;
+}
+
+#comments .comment-number-widget .score {
+    display: block;
+    width: 32px;
+    text-align: center;
+}
+
+#comments .cancel-on-png, #comments .cancel-off-png, #comments .star-on-png, #comments .star-off-png, #comments .star-half-png {
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: "raty";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/raty.eot");
+    src: url("../fonts/raty.eot?#iefix") format("embedded-opentype");
+    src: url("../fonts/raty.svg#raty") format("svg");
+    src: url("../fonts/raty.ttf") format("truetype");
+    src: url("../fonts/raty.woff") format("woff");
+}
+
+#comments .cancel-on-png,
+#comments .cancel-off-png,
+#comments .star-on-png,
+#comments .star-off-png,
+#comments .star-half-png {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "raty";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+}
+
+#comments .cancel-on-png:before {
+    content: "\e600";
+}
+
+#comments .cancel-off-png:before {
+    content: "\e601";
+}
+
+#comments .star-on-png:before {
+    content: "\f005";
+}
+
+#comments .star-off-png:before {
+    content: "\f006";
+}
+
+#comments .star-half-png:before {
+    content: "\f123";
+}
+
+#comments .rate-stars-widget {
+    margin-top: 20px;
+}

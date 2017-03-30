@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table tang_product_table'
+    - builder_table_create_tang_product_table.php

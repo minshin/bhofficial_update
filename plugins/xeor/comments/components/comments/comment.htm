@@ -1,0 +1,67 @@
+{{ comment.prefix|raw }}
+<div class="comment-inner {{ comment.new }} container-fluid">
+    <div class="row" style="margin-bottom: 15px">
+        <div class="col-xs-2" style="max-width: 64px;padding: 0">
+            {% if comment.avatar != '' %}
+                <img class="media-object" src="{{ comment.avatar }}"/>
+            {% else %}
+                <img class="media-object" src="http://www.gravatar.com/avatar/0b82069d0d95bf220796eecae463d6db?s=64&d=mm"/>
+            {% endif %}
+        </div>
+        <div class="col-xs-8">
+            <div class="media-body">
+                <h4 class="media-heading">
+                    {% if comment.name != '' %}
+                        <span class="user-name">
+                                    {{ comment.name }}
+                                </span>
+                    {% endif %}
+
+                    <small class="comment-published-at">{{ comment.created_at|date('m.d.Y') }}</small>
+                </h4>
+                <div class="comment-content">{{ comment.content_html|raw }}</div>
+                <div class="comment-actions">
+
+                    <a href="#comment-{{ comment.id }}" class="action-link">permalink</a>
+
+                    {% if ( comment.nest_depth < depth ) or ( depth == 0 ) %}
+                        <a href="#"
+                           class="action-link reply"
+                           data-id="{{ comment.id }}"
+                           data-level="{{ level }}">reply</a>
+                    {% endif %}
+
+                    {% if (comment.user_id != 0) and (userId == comment.user_id) %}
+                        <a href="#"
+                           data-id="{{ comment.id }}"
+                           class="action-link edit">edit</a>
+                        <a href="#"
+                           data-id="{{ comment.id }}"
+                           class="action-link delete">delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2">
+
+            {% if rate == 'stars' %}
+                <div class="comment-stars-widget" data-id="{{ comment.id }}" data-score="{{ comment.score }}"></div>
+                <p>Total: <span class="comment-total">{{ comment.total }}</span>.</p>
+                {% if comment.voted %}
+                    <p>You voted!</p>
+                {% endif %}
+            {% elseif rate == 'number' %}
+                <div class="comment-number-widget" data-id="{{ comment.id }}">
+                    <a href="#" class="arrow-up" data-value="+1">+1</a>
+                    <span class="comment-score">{{ comment.score }}</span>
+                    <a href="#" class="arrow-down" data-value="-1">-1</a>
+                </div>
+                {% if comment.voted %}
+                    <p>You voted!</p>
+                {% endif %}
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{{ comment.suffix|raw }}

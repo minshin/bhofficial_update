@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: planetadeleste.blogchimp::lang.import.label
+
+# Model Form Field configuration
+form: $/planetadeleste/blogchimp/models/import/fields.yaml
+
+# Model Class name
+modelClass: PlanetaDelEste\BlogChimp\Models\Import
+
+# Default redirect location
+defaultRedirect: planetadeleste/blogchimp/imports
+
+# Create page
+create:
+    title: planetadeleste.blogchimp::lang.import.create_title
+    redirect: planetadeleste/blogchimp/imports/update/:id
+    redirectClose: planetadeleste/blogchimp/imports
+
+# Update page
+update:
+    title: planetadeleste.blogchimp::lang.import.update_title
+    redirect: planetadeleste/blogchimp/imports
+    redirectClose: planetadeleste/blogchimp/imports
+
+# Preview page
+preview:
+    title: planetadeleste.blogchimp::lang.import.preview_title

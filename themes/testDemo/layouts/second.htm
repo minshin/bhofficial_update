@@ -1,0 +1,43 @@
+description = "Default layout"
+
+[session]
+security = "all"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+      {% partial 'head' %}
+    </head>
+    <body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
+
+        <!-- Header -->
+        <header id="layout-header">
+        {% partial 'header' %}
+        </header>
+
+         <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+              {% partial 'footer' %}
+        </footer>
+        <!-- Scripts -->
+        <script src="{{ [
+            'assets/javascript/jquery-1.11.3.min.js',
+            'assets/javascript/bootstrap.min.js',
+            'assets/javascript/bootstrap-touch-slider-min.js',
+            'assets/javascript/wow.min.js',                       
+            'assets/javascript/plugins.min.js',
+            'assets/javascript/jquery.lazyload.min.js',
+            'assets/javascript/rem.js',
+            'assets/javascript/main.js',
+        ]|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

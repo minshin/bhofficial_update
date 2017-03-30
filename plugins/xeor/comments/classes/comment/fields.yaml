@@ -1,0 +1,45 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+
+    name:
+        label: xeor.comments::lang.backend.name_label
+        placeholder: xeor.comments::lang.backend.name_placeholder
+        span: left
+
+    mail:
+        label: xeor.comments::lang.backend.mail_label
+        placeholder: xeor.comments::lang.backend.mail_placeholder
+        span: left
+
+    homepage:
+        label: xeor.comments::lang.backend.homepage_label
+        placeholder: xeor.comments::lang.backend.homepage__placeholder
+        span: left
+
+    content:
+        type: textarea
+        size: tiny
+        commentAbove: '<hr>'
+        commentHtml: 1
+        attributes:
+            default-focus: 1
+
+    published:
+        label: xeor.comments::lang.backend.published_label
+        span: left
+        type: checkbox
+
+    created_at:
+        label: xeor.comments::lang.backend.created_at_label
+        span: right
+        cssClass: checkbox-align
+        type: datepicker
+        mode: datetime
+        trigger:
+            action: enable
+            field: published
+            condition: checked

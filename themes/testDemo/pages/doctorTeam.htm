@@ -1,0 +1,28 @@
+title="薄荷牙医-您身边的牙医专家"
+url="/doctorteam"
+layout="second"
+description=""
+hidden="0"
+==
+<!-- 顶部背景图begin -->
+<div id="topBg">
+{% partial 'baike/topBg' %}
+
+</div>
+<!-- 顶部背景图end-->
+<!-- 面包屑导航begin -->
+<div id="breadNav">
+  {% set type =['洗牙','种牙'] %}
+  {% content 'breadNav' type=type[0] %}
+
+</div>
+<!-- 面包屑导航end -->
+
+<!-- 服务项目导航begin -->
+
+<div id="seviceList">
+  {% set type='doctor' %}
+  {% partial 'index/serviceList' type=type %}
+</div>
+
+<!-- 服务项目导航end -->

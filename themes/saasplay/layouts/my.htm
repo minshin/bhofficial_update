@@ -1,0 +1,38 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="King">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ 'assets/vendor/bootstrap/css/bootstrap.min.css'|theme }}" rel="stylesheet">
+    {% styles %}
+</head>
+<body>
+
+<!-- Header -->
+<header id="layout-header">
+  <!-- Nav -->
+</header>
+
+<!-- Content -->
+<section id="layout-content">
+    {% page %}
+</section>
+<!-- Footer -->
+<footer id="layout-footer">
+我玩的哇多
+</footer>
+
+<!-- Scripts -->
+<script src="{{ 'assets/vendor/jquery/jquery-3.1.1.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>

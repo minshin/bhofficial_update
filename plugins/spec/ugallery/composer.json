@@ -1,0 +1,23 @@
+{
+    "name": "Spec/Gallery-plugin",
+    "type": "october-plugin",
+    "description": "Gallery plugin",
+    "keywords": ["gallery", "ubergallery", "spec", "plugin"],
+    "license": "",
+
+    "authors": [
+        {
+            "name": "Spec",
+            "email": "",
+            "role": "Producer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spec\\uGallery\\": ""
+        }
+    },
+}

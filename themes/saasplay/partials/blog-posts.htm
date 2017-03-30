@@ -1,0 +1,53 @@
+{% set posts = blogPosts.posts %}
+<div class="container">
+    {% for post in posts %}
+    <article id="72" class="post">
+        <div class="post-head">
+            <h1 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <div class="post-meta">
+                <span class="author">作者：<a href="/author/wangsai/">王赛</a></span> •
+                <time class="post-date" datetime="2017年1月25日星期三凌晨5点23分" title="2017年1月25日星期三凌晨5点23分">2017年1月25日</time>
+            </div>
+        </div>
+        <div class="featured-media">
+            <a href="{{ post.url }}">
+                <img src="{{  post.featured_images[0].path  }}" alt="">
+            </a>
+        </div>
+        <div class="post-content">
+            <p>Laravel 5.4 版本正式发布了！这一版本带来了很多新特性以及对原有功能的提升。 Laravel Dusk Laravel Dusk 是一个端到端（end-to-end）的浏览器测试工具。对于夹杂了 JavaScript 开发的应用，Dusk 可以提供页面交互测试，因此，你可以用 Dusk 测试点击按钮、链接、表</p>
+        </div>
+        <div class="post-permalink">
+            <a href="{{ post.url }}" class="btn btn-default">阅读全文</a>
+        </div>
+
+        <footer class="post-footer clearfix">
+            <div class="pull-left tag-list">
+                <i class="fa fa-folder-open-o"></i>
+
+            </div>
+            <div class="pull-right share">
+            </div>
+        </footer>
+    </article>
+    {% else %}
+    <li class="no-data">{{ noPostsMessage }}</li>
+    {% endfor %}
+</div>
+{% if posts.lastPage > 1 %}
+<ul class="pagination">
+    {% if posts.currentPage > 1 %}
+    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+    {% endif %}
+
+    {% for page in 1..posts.lastPage %}
+    <li class="{{ posts.currentPage == page ? 'active' : null }}">
+        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+    </li>
+    {% endfor %}
+
+    {% if posts.lastPage > posts.currentPage %}
+    <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+    {% endif %}
+</ul>
+{% endif %}

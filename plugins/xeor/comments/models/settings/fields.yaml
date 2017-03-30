@@ -1,0 +1,64 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+
+fields:
+
+    settings_section:
+        type: partial
+        path: $/xeor/comments/models/settings/_label.htm
+
+
+    notifications:
+        label: xeor.comments::lang.settings.notifications
+        type: section
+
+    comments_notify:
+        label: xeor.comments::lang.settings.comments_notify
+        type: switch
+        default: true
+
+    moderation_notify:
+        label: xeor.comments::lang.settings.moderation_notify
+        type: switch
+        default: true
+
+
+    before_a_comment_appears:
+        label: xeor.comments::lang.settings.before_a_comment_appears
+        type: section
+
+    comment_moderation:
+        label: xeor.comments::lang.settings.comment_moderation
+        type: switch
+        default: false
+    comment_whitelist:
+        label: xeor.comments::lang.settings.comment_whitelist
+        type: switch
+        default: true
+
+
+    other_comment_settings:
+        label: xeor.comments::lang.settings.other_comment_settings
+        type: section
+
+    css:
+        label: xeor.comments::lang.settings.css
+        type: switch
+        default: true
+        span: left
+
+    hide_reply_form:
+        label: xeor.comments::lang.settings.hide_reply_form
+        comment: xeor.comments::lang.settings.hide_reply_form_description
+        type: switch
+        default: true
+        span: left
+
+    hide_main_form:
+        label: xeor.comments::lang.settings.hide_main_form
+        comment: xeor.comments::lang.settings.hide_main_form_description
+        type: switch
+        default: true
+        span: left

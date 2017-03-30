@@ -1,0 +1,12 @@
+columns:
+    title:
+        label: '标题'
+        type: text
+        searchable: true
+    content:
+        label: '内容'
+        type: text
+        searchable: true   
+    published_at:
+        label: '发布时间'
+        type: date   

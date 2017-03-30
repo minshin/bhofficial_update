@@ -1,0 +1,9 @@
+objects:
+  label: Objects
+  view:
+      list: $/timfoerster/leaflet/models/objects/columns.yaml
+      toolbarButtons: create|delete
+  manage:
+      form: $/timfoerster/leaflet/models/objects/fields.yaml
+      recordsPerPage: 10
+  deferredBinding: true

@@ -1,0 +1,6 @@
+1.0.0:
+      - First version of Spot.IM plugin
+1.0.1:
+      - Add installation guide
+      - Change folder and namespace
+      - Fix counting text label in Replies count component

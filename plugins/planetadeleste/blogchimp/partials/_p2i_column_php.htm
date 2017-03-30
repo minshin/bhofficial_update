@@ -1,0 +1,12 @@
+<?php /** @var \RainLab\Blog\Models\Post $record */
+if ($record->is_mail_chimp && \PlanetaDelEste\BlogChimp\Models\Setting::get('use_p2i')) : ?>
+    <?php $p2i_status = ($record->campaign->p2i_status) ? $record->campaign->p2i_status : 'unknown'; ?>
+    <img src="/plugins/planetadeleste/blogchimp/assets/images/p2i-logo.png" width="24">
+    <span class="oc-icon-circle text-<?= array_get(
+        ['error' => 'danger', 'processing' => 'info', 'finished' => 'success', 'unknown' => 'muted'],
+        $p2i_status,
+        'muted'
+    ) ?>"><?= e(
+            trans('planetadeleste.blogchimp::lang.p2i.status.'.$p2i_status)
+        ) ?></span>
+<?php endif; ?>

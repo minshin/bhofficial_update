@@ -1,0 +1,30 @@
+<button type="button"
+        class="edit-comment btn btn-default oc-icon-pencil"
+        data-control="popup"
+        data-handler="onLoadEditForm"
+        data-request-data="id: <?= $record->id; ?>"
+        data-size="samll"
+        href="javascript:;">
+    <?= e(trans('xeor.comments::lang.backend.edit_comment')) ?>
+</button>
+
+<button type="button"
+        class="delete-comment btn btn-danger oc-icon-trash-o"
+        data-control="popup"
+        data-handler="onDeleteComment"
+        data-request-data="id: <?= $record->id; ?>"
+        data-request-confirm="<?= e(trans('xeor.comments::lang.backend.confirm')) ?>"
+        data-request-redirect="/backend/xeor/comments/comments"
+        href="javascript:;">
+    <?= e(trans('xeor.comments::lang.backend.delete_comment')) ?>
+</button>
+
+<button type="button"
+        class="edit-comment btn btn-default oc-icon-bar-chart"
+        data-control="popup"
+        data-handler="onLoadStatisticsForm"
+        data-request-data="id: <?= $record->id; ?>"
+        data-size="samll"
+        href="javascript:;">
+    <?= e(trans('xeor.comments::lang.backend.statistics_comment')) ?>
+</button>

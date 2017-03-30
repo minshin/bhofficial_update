@@ -1,0 +1,29 @@
+columns:
+    id:
+        label: 'id'
+        type: text
+    name:
+        label: '标题'
+        type: text
+        searchable: true
+    jobtitle:
+        label: '内容'
+        type: text
+        searchable: true   
+    skilledin:
+        label: '擅长领域'
+        type: text 
+    state:
+        label: '状态'
+        span: left
+        type: switch 
+    level:
+        label: '级别'
+        span: left 
+        type: text
+  
+    type:
+        label: '类别'
+        span: left 
+        type: text
+        searchable: true

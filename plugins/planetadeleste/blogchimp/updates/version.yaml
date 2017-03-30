@@ -1,0 +1,10 @@
+1.0.1:
+  - First version of BlogChimp
+1.0.2:
+  - Create Campaign Model
+  - create_campaigns_table.php
+1.0.3:
+  - Add Page2Images services
+1.0.4:
+  - Save Page2Images api response
+  - update_campaigns_table.php

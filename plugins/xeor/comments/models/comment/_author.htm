@@ -1,0 +1,18 @@
+<?php $comment = $record; ?>
+
+ID: <?= $comment->id ?><br>
+<?php if (isset($comment->name)): ?>
+    <strong><?= $comment->name ?></strong><br>
+<?php endif; ?>
+
+<?php if (isset($comment->mail)): ?>
+    <span class="link" onclick="location.href='mailto:<?= $comment->mail ?>';"><?= $comment->mail ?></span><br>
+<?php endif; ?>
+
+<?php if (isset($comment->homepage)): ?>
+    <span class="link" onclick="window.open('<?= $comment->homepage ?>');"><?= $comment->homepage ?></span><br>
+<?php endif; ?>
+
+<?php if (isset($comment->hostname)): ?>
+    <span class="link js-hostname"><?= $comment->hostname ?></span>
+<?php endif; ?>

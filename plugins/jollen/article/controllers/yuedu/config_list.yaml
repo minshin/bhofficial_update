@@ -1,0 +1,11 @@
+title: Jollen
+modelClass: Jollen\article\Models\Post
+list: $/jollen/article/models/post/columns.yaml
+recordUrl: 'jollen/article/yuedu/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

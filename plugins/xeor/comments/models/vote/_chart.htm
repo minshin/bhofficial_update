@@ -1,0 +1,15 @@
+<div class="report-widget" style="margin-bottom: 20px">
+    <div
+            class="control-chart"
+            data-control="chart-pie"
+            data-size="200"
+            data-center-text="<?=$sizes['total']?>">
+        <ul>
+            <?php foreach($sizes['data'] as $label => $value): ?>
+            <li><?= $label ?> <span><?= $value ?></span></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+
+<input type="hidden" name="id" value="<?= $commentId ?>" />

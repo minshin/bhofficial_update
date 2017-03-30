@@ -1,0 +1,36 @@
+subject = "Please moderate a new comment"
+==
+
+A new comment on your page is waiting for your approval
+
+Permalink: {{ url('/') ~ '/' ~ comment.uri ~ '#comment-' ~ comment.id }}
+
+Author: {{ comment.name }} (IP: {{ comment.hostname }})
+
+Email: {{ comment.mail }}
+
+URL: {{ comment.homepage }}
+
+Comment: {{ comment.content }}
+
+Approve it: {{ url('/') ~ '/backend/xeor/comments/comments/approve/' ~ comment.id }}
+
+Delete it: {{ url('/') ~ '/backend/xeor/comments/comments/delete/' ~ comment.id }}
+
+==
+
+<p>A new comment on your page is waiting for your approval</p>
+
+<p>Permalink: {{ url('/') ~ '/' ~ comment.uri ~ '#comment-' ~ comment.id }}</p>
+
+<p>Author: {{ comment.name }} (IP: {{ comment.hostname }})</p>
+
+<p>Email: {{ comment.mail }}</p>
+
+<p>URL: {{ comment.homepage }}</p>
+
+<p>Comment: {{ comment.content }}</p>
+
+<p>Approve it: {{ url('/') ~ '/backend/xeor/comments/comments/approve/' ~ comment.id }}</p>
+
+<p>Delete it: {{ url('/') ~ '/backend/xeor/comments/comments/delete/' ~ comment.id }}</p>

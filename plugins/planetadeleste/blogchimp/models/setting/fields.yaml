@@ -1,0 +1,163 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        mc_key:
+            label: planetadeleste.blogchimp::lang.setting.mc_key
+            tab: planetadeleste.blogchimp::lang.setting.mc
+        remove_selectors:
+            label: planetadeleste.blogchimp::lang.setting.remove_selectors
+            comment: planetadeleste.blogchimp::lang.setting.remove_selectors_comment
+            tab: planetadeleste.blogchimp::lang.setting.mc
+            span: left
+            type: repeater
+            form:
+                fields:
+                    selector:
+                        label: planetadeleste.blogchimp::lang.setting.selector
+        remove_style_attributes:
+            label: planetadeleste.blogchimp::lang.setting.remove_style_attributes
+            comment: planetadeleste.blogchimp::lang.setting.remove_style_attributes_comment
+            tab: planetadeleste.blogchimp::lang.setting.mc
+            span: right
+            type: repeater
+            form:
+                fields:
+                    css_style:
+                        label: planetadeleste.blogchimp::lang.setting.css_style
+
+        p2i_section:
+            label: planetadeleste.blogchimp::lang.setting.p2i_section
+            comment: planetadeleste.blogchimp::lang.setting.p2i_section_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            type: section
+
+        use_p2i:
+            label: planetadeleste.blogchimp::lang.setting.use_p2i
+            comment: planetadeleste.blogchimp::lang.setting.use_p2i_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: left
+            type: switch
+            default: false
+
+        p2i_btn_regenerate_images:
+            label: planetadeleste.blogchimp::lang.setting.regenerate_images
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: right
+            type: button
+            text: planetadeleste.blogchimp::lang.setting.regenerate_images_btn_label
+            css: btn-default oc-icon-refresh
+            loadingIndicator: true
+            dataAttr:
+                model-request: onRegenerateP2i
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_key:
+            label: planetadeleste.blogchimp::lang.setting.p2i_key
+            comment: planetadeleste.blogchimp::lang.setting.p2i_key_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: left
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_left_calls:
+            label: planetadeleste.blogchimp::lang.setting.p2i_left_calls
+            comment: planetadeleste.blogchimp::lang.setting.p2i_left_calls_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: right
+            disabled: true
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_device:
+            label: planetadeleste.blogchimp::lang.setting.p2i_device
+            comment: planetadeleste.blogchimp::lang.setting.p2i_device_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            type: dropdown
+            span: left
+            default: 6
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_url:
+            label: planetadeleste.blogchimp::lang.setting.p2i_url
+            comment: planetadeleste.blogchimp::lang.setting.p2i_url_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            type: dropdown
+            span: right
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_screen:
+            label: planetadeleste.blogchimp::lang.setting.p2i_screen_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            type: section
+
+        p2i_screen_width:
+            label: planetadeleste.blogchimp::lang.setting.p2i_screen_width
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: left
+            type: number
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_screen_height:
+            label: planetadeleste.blogchimp::lang.setting.p2i_screen_height
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: right
+            type: number
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_size:
+            label: planetadeleste.blogchimp::lang.setting.p2i_size_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            type: section
+
+        p2i_size_width:
+            label: planetadeleste.blogchimp::lang.setting.p2i_size_width
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: left
+            type: number
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_size_height:
+            label: planetadeleste.blogchimp::lang.setting.p2i_size_height
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: right
+            type: number
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked
+
+        p2i_fullpage:
+            label: planetadeleste.blogchimp::lang.setting.p2i_fullpage
+            comment: planetadeleste.blogchimp::lang.setting.p2i_fullpage_comment
+            tab: planetadeleste.blogchimp::lang.setting.p2i
+            span: left
+            type: switch
+            trigger:
+                action: show
+                field: use_p2i
+                condition: checked

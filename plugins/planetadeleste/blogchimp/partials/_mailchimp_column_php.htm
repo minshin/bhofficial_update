@@ -1,0 +1,6 @@
+<?php /** @var \RainLab\Blog\Models\Post $record */
+if($record->is_mail_chimp) : ?>
+    <img src="/plugins/planetadeleste/blogchimp/assets/images/mailchimp-logo.svg" width="24">
+<?php else : ?>
+    <img src="/plugins/planetadeleste/blogchimp/assets/images/mailchimp-logo.svg" width="24" style="-webkit-filter:grayscale(100%);filter:grayscale(100%);opacity:0.4;filter:alpha(opacity=40)">
+<?php endif; ?>

@@ -1,0 +1,40 @@
+subject = "New comment"
+==
+
+New comment on your page
+
+Author: {{ comment.name }} (IP: {{ comment.hostname }})
+
+Email: {{ comment.mail }}
+
+URL: {{ comment.homepage }}
+
+Comment: {{ comment.content }}
+
+You can see all comments on this post here:
+
+{{ url('/') ~ '/' ~ comment.uri ~ '#comments' }}
+
+Permalink: {{ url('/') ~ '/' ~ comment.uri ~ '#comment-' ~ comment.id }}
+
+Delete it: {{ url('/') ~ '/backend/xeor/comments/comments/delete/' ~ comment.id }}
+
+==
+
+<p>New comment on your page</p>
+
+<p>Author: {{ comment.name }} (IP: {{ comment.hostname }})</p>
+
+<p>Email: {{ comment.mail }}</p>
+
+<p>URL: {{ comment.homepage }}</p>
+
+<p>Comment: {{ comment.content }}</p>
+
+<p>You can see all comments on this post here:</p>
+
+<p>{{ url('/') ~ '/' ~ comment.uri ~ '#comments' }}</p>
+
+<p>Permalink: {{ url('/') ~ '/' ~ comment.uri ~ '#comment-' ~ comment.id }}</p>
+
+<p>Delete it: {{ url('/') ~ '/backend/xeor/comments/comments/delete/' ~ comment.id }}</p>

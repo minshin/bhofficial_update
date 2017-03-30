@@ -1,0 +1,75 @@
+description = "Default layout"
+
+[session]
+security = "all"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+      {% partial 'head' %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+        woshiheader
+        {% partial "pramapartial" name="david" age="24" %}
+        <br>
+      <p>{{ this.page.title }}</p>
+      <br>
+      <p>{{ this.page.layout }}</p>
+      <br>
+    {% if this.page.hidden %}
+    <p>没影藏我才出现</p>
+    {% endif%}
+        </header>
+
+        {% set jumbotronTexture = random(['carbon', 'dustnscratches', 'elegant', 'grunge', 'leather', 'lines', 'plaid', 'wood']) %}
+
+        <!-- Content -->
+        <section id="layout-content">
+            <div class="jumbotron" style="background-image:url({{ ('assets/images/textures/'~jumbotronTexture~'.png')|theme }})">
+                <div class="container">
+                    <h1>{{ this.page.title }}</h1>
+                    <p>{{ this.page.description }}</p>
+                </div>
+            </div>
+            <div class="container">
+              我是default页面
+                {% page %}
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            <!-- woshifooter -->
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ [
+            'assets/javascript/jquery.js',
+            'assets/vendor/bootstrap/js/transition.js',
+            'assets/vendor/bootstrap/js/alert.js',
+            'assets/vendor/bootstrap/js/button.js',
+            'assets/vendor/bootstrap/js/carousel.js',
+            'assets/vendor/bootstrap/js/collapse.js',
+            'assets/vendor/bootstrap/js/dropdown.js',
+            'assets/vendor/bootstrap/js/modal.js',
+            'assets/vendor/bootstrap/js/tooltip.js',
+            'assets/vendor/bootstrap/js/popover.js',
+            'assets/vendor/bootstrap/js/scrollspy.js',
+            'assets/vendor/bootstrap/js/tab.js',
+            'assets/vendor/bootstrap/js/affix.js',
+            'assets/javascript/utils.js',
+            'assets/javascript/app.js',
+            'assets/javascript/main.js',
+
+
+
+        ]|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

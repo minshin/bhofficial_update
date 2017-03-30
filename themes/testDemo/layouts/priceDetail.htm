@@ -1,0 +1,40 @@
+description = "Default layout"
+
+[session]
+security = "all"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+      {% partial 'head' %}
+    </head>
+    <body>
+
+        <!-- Content -->
+        <section id="layout-content">
+                {% page %}
+        </section>
+        
+        <!-- Scripts -->
+        <script src="{{ [
+          'assets/javascript/jquery-1.11.3.min.js',
+          'assets/javascript/bootstrap.min.js',
+
+        ]|theme }}"></script>
+
+        <!-- // 获取url参数
+        // function getQueryString(name) {
+        // var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        // var r = window.location.search.substr(1).match(reg);
+        // if (r != null) return unescape(r[2]); return null;
+        // }
+        // var idStr =getQueryString('id');
+        // console.log(idStr); -->
+
+
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

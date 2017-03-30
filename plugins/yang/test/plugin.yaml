@@ -1,0 +1,6 @@
+plugin:
+    name: 'yang.test::lang.plugin.name'
+    description: 'yang.test::lang.plugin.description'
+    author: yang
+    icon: oc-icon-adjust
+    homepage: ''
