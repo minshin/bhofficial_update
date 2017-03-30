@@ -1,4 +1,4 @@
-name: Bohe
+name: 医生
 modelClass: Bohe\Article\Models\Index
 form: $/bohe/article/models/index/fields.yaml
 defaultRedirect: bohe/article/index

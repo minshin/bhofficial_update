@@ -5,6 +5,7 @@ use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use RainLab\Blog\Models\Post as BlogPost;
 use RainLab\Blog\Models\Category as BlogCategory;
+use PolloZen\MostVisited\Models\Visits as MostPost;
 use Log;
 
 class Posts extends ComponentBase
@@ -117,6 +118,14 @@ class Posts extends ComponentBase
                 'default'           => '',
                 'group'             => 'Exceptions',
             ],
+        	'type' => [
+                'description'       => 'type of blog',
+                'title'             => 'title',
+                'default'           => 10,
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'The Max Items value is required and should be integer.'
+            ]
         ];
     }
 
@@ -140,6 +149,7 @@ class Posts extends ComponentBase
         $this->prepareVars();
 
         $this->category = $this->page['category'] = $this->loadCategory();
+        //var_dump($this->listPosts());die;
         $this->posts = $this->page['posts'] = $this->listPosts();
 
         /*
@@ -167,12 +177,15 @@ class Posts extends ComponentBase
 
     protected function listPosts()
     {
-        $category = $this->category ? $this->category->id : null;
-
+        //$category = $this->category ? $this->category->id : null;
+    	$category = $this->param('category')? $this->param('category') : null;
+        $type = $this->property('type');
         /*
          * List all the posts, eager load their categories
          */
-        $posts = BlogPost::with('categories')->listFrontEnd([
+  //      var_dump($type);die;
+        if($type==1){
+        $posts = BlogPost::where('type', 1)->listFrontEnd([
             'page'       => $this->property('pageNumber'),
             'sort'       => $this->property('sortOrder'),
             'perPage'    => $this->property('postsPerPage'),
@@ -180,15 +193,28 @@ class Posts extends ComponentBase
             'category'   => $category,
             'exceptPost' => $this->property('exceptPost'),
         ]);
-
+        }elseif($type==2){
+        	$posts = BlogPost::where('type', 2)->listFrontEnd([
+        			'page'       => $this->property('pageNumber'),
+        			'sort'       => $this->property('sortOrder'),
+        			'perPage'    => $this->property('postsPerPage'),
+        			'search'     => trim(input('search')),
+        			'category'   => $category,
+        			'exceptPost' => $this->property('exceptPost'),
+        	]);
+        }
         /*
          * Add a "url" helper attribute for linking to each post and category
          */
         $posts->each(function($post) {
             Log::info("ooooooooooooooo");
             $post->setUrl($this->postPage, $this->controller);
-            Log::info($this->postPage);
-            Log::info($post->url);
+            $views=MostPost::where('post_id', $post->id)->first();
+            if($views){
+            	$post->visits=$views->visits;
+            }else{
+            	$post->visits=0;
+            }
             $post->categories->each(function($category) {
                 $category->setUrl($this->categoryPage, $this->controller);
             });

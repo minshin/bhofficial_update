@@ -3,17 +3,20 @@ url="/serviceList"
 layout="second"
 description=""
 hidden="0"
+
 ==
 <!-- 顶部背景图begin -->
 <div id="topBg">
-{% partial 'baike/topBg' %}
+  {% set topContent={'title1':'追求卓越 尽善尽美','title2':'Pursuit of excellence， ','title3':'Make all-out efforts','imgSrc':'serviceTopBg.png','position':'left'} %}
+
+{% partial 'baike/topBg' topContent=topContent %}
 
 </div>
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav">
-{% set type =['洗牙','种牙']%}
-{% content 'breadNav' type=type[0] %}
+{% set type =[{'title':'网站首页','isHref':'/home'},{'title':'服务项目','isHref':'/home'},{'title':'洗牙','isHref':false}] %}
+{% partial 'breadNav' types=type %}
 </div>
 <!-- 面包屑导航end -->
 
@@ -21,7 +24,8 @@ hidden="0"
 
 <div id="seviceList">
   {% set type='service' %}
-  {% partial 'index/serviceList' type=type %}
+  {% set typeItems=['洗牙','美白','补牙','种牙','正畸','镶牙','儿童口腔','口腔检查'] %}
+  {% partial 'index/serviceList' type=type typeItems=typeItems %}
 </div>
 
 <!-- 服务项目导航end -->

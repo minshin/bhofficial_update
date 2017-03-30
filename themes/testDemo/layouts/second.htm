@@ -3,16 +3,37 @@ description = "Default layout"
 [session]
 security = "all"
 ==
+function onStart()
+{
+    $this->addCss('assets/css/nav.css');
+}
+==
 <!DOCTYPE html>
 <html>
     <head>
       {% partial 'head' %}
+
+      {% if  this.page.id !='home' %}
+
+       {% styles %}
+
+      {% endif %}
+
+
     </head>
-    <body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
+    <body data-spy="scroll" data-target="#bootstrap-touch-slider">
 
         <!-- Header -->
         <header id="layout-header">
         {% partial 'header' %}
+
+        <!-- {% if  this.page.id =='home' %}
+        {% put styles %}
+        <link rel="stylesheet" href="{{ ['assets/css/nav.css'] |theme}}">
+        {% endput %}
+        {% endif %} -->
+
+
         </header>
 
          <!-- Content -->
@@ -29,10 +50,9 @@ security = "all"
             'assets/javascript/jquery-1.11.3.min.js',
             'assets/javascript/bootstrap.min.js',
             'assets/javascript/bootstrap-touch-slider-min.js',
-            'assets/javascript/wow.min.js',                       
+            'assets/javascript/wow.min.js',
             'assets/javascript/plugins.min.js',
             'assets/javascript/jquery.lazyload.min.js',
-            'assets/javascript/rem.js',
             'assets/javascript/main.js',
         ]|theme }}"></script>
 

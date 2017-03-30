@@ -50,7 +50,17 @@ class Plugin extends PluginBase
     					'iconSvg'     => 'plugins/bohe/article/assets/images/doctor.svg',
     					'permissions' => ['bohe.article.*'],
     					'order'       => 50,
-    			]
+    					'sideMenu' => [
+
+    							'types' => [
+    									'label'       => 'bohe.article::lang.article.types',
+    									'icon'        => 'icon-list-ul',
+    									'url'         => Backend::url('bohe/article/types'),
+    									'permissions' => ['bohe.article.*']
+    							]
+    					]
+    			],
+    			
     	];
     }
 }

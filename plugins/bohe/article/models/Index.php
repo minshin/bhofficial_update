@@ -14,7 +14,15 @@ class Index extends Model
 	 */
 	public $rules = [
 	];
-	
+   /*
+    *  定义与type表的关联
+    */
+	public $belongsToMany = [
+			'types' => [
+					'Bohe\Article\Models\Type',
+					'table' => 'bohe_doctor_posts_types',
+			]
+	];
 	public $attachMany = [
 			'photo' => ['System\Models\File'],
 			'qrcode_pic' => ['System\Models\File'],

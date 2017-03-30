@@ -1,0 +1,42 @@
+
+{% set posts = articlebohelist.posts %}
+<div class="container">
+
+    {% for post in posts %}
+   {{post.id}}  {{post.name}}{{post.jobtitle}}{{post.skilledin}} <br>
+   {{post.introduce}}
+{% if post.photo.count %}
+<div >
+    {% for image in post.photo %}
+    <p>
+        <img
+                data-src="{{ image.filename }}"
+                src="{{ image.path }}"
+                alt="{{ image.description }}"
+                style="max-width: 100%" />
+    </p>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if post.qrcode_pic.count %}
+<div >
+    {% for image in post.qrcode_pic %}
+    <p>
+        <img
+                data-src="{{ image.filename }}"
+                src="{{ image.path }}"
+                alt="{{ image.description }}"
+                style="max-width: 100%" />
+    </p>
+    {% endfor %}
+</div>
+{% endif %}
+
+    {% endfor %}
+     {{ posts.render|raw }}
+     
+     
+
+</div>
+

@@ -1,4 +1,4 @@
-title: Bohe
+title: 医生列表
 modelClass: Bohe\Article\Models\Index
 list: $/bohe/article/models/index/columns.yaml
 recordUrl: 'bohe/article/index/update/:id'

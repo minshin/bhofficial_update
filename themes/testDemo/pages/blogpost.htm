@@ -1,0 +1,27 @@
+title = "Blog Post"
+url = "/blog/post/:id"
+layout = "priceDetail"
+
+[blogPost]
+[comments]
+[registerVisit]
+[topPosts]
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if (isset($this->thepost))
+        $this->page->title = $this->thepost->title;
+}
+?>
+==
+{% if thepost %}
+<h2>{{ thepost.title }}</h2>
+
+{% partial 'blog-post.htm' %}
+{% component 'comments' %}
+
+{% else %}
+<h2>Post not found</h2>
+{% endif %}

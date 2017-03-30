@@ -7,19 +7,22 @@ hidden="0"
 
 <!-- 顶部背景图begin -->
 <div id="topBg">
-{% partial 'baike/topBg' %}
+  {% set topContent={'title1':'优质的口腔医疗服务','title2':'Good oral health services','title3':'','imgSrc':'companyIntroTopBg.png','position':'left'} %}
+
+{% partial 'baike/topBg' topContent=topContent %}
 </div>
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav">
-{% set type =['洗牙','种牙']%}
-  {% content 'breadNav' type=type[0] %}
+  {% set type =[{'title':'网站首页','isHref':'/home'},{'title':'公司简介','isHref':false}] %}
+  {% partial 'breadNav' types=type %}
 </div>
 <!-- 面包屑导航end -->
 
 <!-- 服务项目导航begin -->
 
 <div id="introContent">
+
 
   {% partial 'companyIntro/introContent' %}
 </div>

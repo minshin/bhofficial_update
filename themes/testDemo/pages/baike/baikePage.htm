@@ -6,14 +6,16 @@ hidden="0"
 ==
 <!-- 顶部背景图begin -->
 <div id="topBg">
-{% partial 'baike/topBg' %}
+  {% set topContent={'title1':'牙齿问题都能在 这里找到答案','title2':'Dental problems can be found here','title3':'','imgSrc':'baikeTopBg.png','position':'right'} %}
+
+{% partial 'baike/topBg' topContent=topContent %}
 
 </div>
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav">
-{% set type =['洗牙','种牙']%}
-  {% content 'breadNav' type=type[0] %}
+  {% set type =[{'title':'网站首页','isHref':'/home'},{'title':'服务项目','isHref':'/home'},{'title':'洗牙','isHref':false}] %}
+  {% partial 'breadNav' types=type %}
 
 </div>
 <!-- 面包屑导航end -->
@@ -22,7 +24,9 @@ hidden="0"
 
 <div id="seviceList">
   {% set type='baike' %}
-  {% partial 'index/serviceList' type=type %}
+  {% set typeItems=['洗牙','美白','补牙','种牙','正畸','镶牙','儿童口腔','口腔检查'] %}
+
+  {% partial 'index/serviceList' type=type typeItems=typeItems %}
 </div>
 
 <!-- 服务项目导航end -->

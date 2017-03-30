@@ -1,0 +1,22 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: bohe.article::lang.type.name
+        placeholder: bohe.article::lang.type.name_placeholder
+        span: left
+
+    slug:
+        label: bohe.article::lang.type.slug
+        span: right
+        placeholder: bohe.article::lang.type.slug_placeholder
+        preset: name
+
+    description:
+        label: 'bohe.article::lang.type.description'
+        size: large
+        span: full
+        type: textarea

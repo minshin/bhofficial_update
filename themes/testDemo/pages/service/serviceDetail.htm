@@ -8,15 +8,15 @@ hidden="0"
 <!-- 顶部背景图end-->
 <!-- 面包屑导航begin -->
 <div id="breadNav" style="margin-top:60px;">
-{% set type =['洗牙','种牙']%}
-  {% content 'breadNav' type=type[0] %}
+  {% set type =[{'title':'网站首页','isHref':'/home'},{'title':'服务项目','isHref':'/home'},{'title':'洗牙','isHref':'/home'},{'title':'超声波洗牙详情','isHref':false}] %}
+  {% partial 'breadNav' types=type %}
 </div>
 <!-- 面包屑导航end -->
 
 <!-- 百科详情区域 begin -->
 
 <div id="serviceDetail">
-  {% partial 'baike/serviceDetailTop' %}
+  {% partial 'serviceDetail/detailContent' %}
 </div>
 
 <!-- 百科详情区域 end -->

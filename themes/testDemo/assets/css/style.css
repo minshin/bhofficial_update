@@ -19,7 +19,7 @@
  .navbar-default .navbar-toggle:focus .navbar-nav {
    background-color: #17ACB2;
  }*/
-.navbar-default .nav li a {font-family: Helvetica,Arial,sans-serif;font-weight: 400;letter-spacing: 1px;color: #000;}
+.navbar-default .nav li a {font-size: 14px;font-family: Helvetica,Arial,sans-serif;font-weight: 200;letter-spacing: 1px;padding: 17px 15px;color: #fff;}
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {outline: 1;color: #206477;}
 .navbar-default .nav li:hover a {
@@ -32,12 +32,13 @@
 
 .navbar-btn {
     background-color: #206477;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #206477;
     color: #ffffff;
+    font-size: 14px;
     font-weight: 400;
     /*margin-top: 16px;*/
-    padding: 8px 15px;
+    padding: 8px 30px;
 }
 
 .navbar-btn:hover{
@@ -250,7 +251,7 @@
 }
 
 .firstContent .titleContent {
-margin-top:10%;
+margin-top:18%;
 }
 .firstContent .titleContent h3,
 .secondContent .secondContent h3
@@ -264,8 +265,10 @@ margin-top:10%;
  {
   color:#fff;
   font-size:40px;
+  font-family:'MFYueHei_Noncommercial Regular';
   letter-spacing:2px;
 }
+
 
 .firstContent .titleContent a {
 padding:10px 30px;
@@ -274,12 +277,13 @@ letter-spacing:2px;
 border:1px solid #fff;
 font-size:40px;
 color:#fff;
+border-radius: 8px;
 background-color:rgba(255,255,255,.02);
 }
 
 
 .firstContent .iconContent {
-margin-top: 100px;
+margin-top: 140px;
 }
 
 .content-overlay {
@@ -288,7 +292,7 @@ margin-top: 100px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:#26778a;
+    background-color:#166f88;
     opacity:0.8;
 }
 
@@ -297,7 +301,7 @@ margin-top: 100px;
   position: absolute;
   /*width: 100%;*/
   bottom:0;
-  top: 50px;
+  top: 0;
   left: 0;
   right: 0;
 }
@@ -306,6 +310,14 @@ margin-top: 100px;
 .thirdContent {
   color: #fff;
 }
+.thirdContent p {
+font-family:'MFYueHei_Noncommercial Regular';
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+ .thirdContent ul {
+  margin-top: 100px;
+ }
 .thirdContent li {
 margin-top: 40px;
 padding-left: 20px;
@@ -537,11 +549,14 @@ overflow:hidden
 /* 薄荷百科beigin*/
 
 
-.baike {
+.baike ,
+{
   margin: 100px auto;
   color:#26778a;
 }
-
+.baike a {
+  color:#26778a;
+}
 .baike .titleContent {
   margin-bottom: 30px;
 }
@@ -621,6 +636,10 @@ overflow:hidden
 
 
 /* 合作公司begin*/
+.cooperate {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 .cooperate .col-md-3 {
   width: 20%;
   margin: 20px 0;
@@ -633,7 +652,7 @@ overflow:hidden
 }
 .cooperate h3:nth-child(2) {
 
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 /*.cooperate .col-sm-4 {
   width: 25%;
@@ -649,9 +668,11 @@ overflow:hidden
   color:#fff
 }
 .homeBottom a {
-margin-top:40px;
+margin-top:27px;
 color:#fff;
-border-radius:17px;
+padding: 15px 30px;
+font-size: 20px;
+border-radius:40px;
 background-color:rgba(255,255,255,0);
 border:1px solid #fff;
 }
@@ -677,6 +698,9 @@ border:1px solid #fff;
   /*background-color:#09283B;*/
   color: #fff;
   padding: 30px 0 30px;
+}
+.footer a:hover {
+  color: #fff;
 }
 .topRow {
   background: #666;
@@ -837,6 +861,11 @@ font-size: 14px;
 
 .footer .saoArea img {
   padding-left: -15px;
+  margin-top: 20px;
+}
+.saoArea p:last-child {
+
+  margin-top: 20px;
 }
 
 /* footer end*/
@@ -1064,12 +1093,14 @@ float: right;
 
 .contentRight a {
 float: right;
-margin-top: 9%;
-border-radius:17px;width:80px;color:#000;
+margin-top: 6%;
+border-radius:17px;
+width:80px;
+color:#000;
 }
 .schedule-content .rowItem {
 
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #d6e2e5;
 }
 
 
@@ -1098,6 +1129,10 @@ margin-top: 20px;
 }
 .schedule-content .div3 {
   margin-top: 40px;
+
+}
+.schedule-content .div3 p{
+  color:#26778a;
 }
 .schedule-content .div2 ul li {
   float: left;
@@ -1132,14 +1167,15 @@ background-color:rgb(231,240,242)
 
 
 .baikeDetail .titleArea {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #d6e2e5;
+  margin: 20px 100px 20px 100px;
 }
 .baikeDetail .titleArea h3
 {
   font-size: 16px;
   font-weight: 200;
   display: inline-block;
-  margin: 20px;
+  margin: 20px 20px 20px 0;;
 }
 .baikeDetail .titleArea h3:first-child {
   font-size: 18px;
@@ -1147,9 +1183,25 @@ background-color:rgb(231,240,242)
 }
 
 .baikeDetail .detailContent {
-  margin: 20px 20px 20px 20px;;
+  margin: 20px 100px 100px 100px;;
 }
 /*薄荷百科详情end*/
+
+/* 服务项目详情 begin */
+
+.serviceDetailContent {
+  margin-bottom: 60px;
+}
+.serviceDetailContent .titleArea {
+  margin: 20px 100px 20px 100px;
+  border-bottom: 1px solid #d6e2e5;
+}
+.serviceDetailContent .serviceDetailDes {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* 服务项目详情 end */
 
 /* 快速预约begin */
 .yuyueContent {
@@ -1192,14 +1244,21 @@ background-color:rgb(231,240,242)
 }
 /* 快速预约end */
 
+
 /* 顶部 topContainer begin*/
 .topContainer .bgImg {
   padding: 0;
+
 }
 .topContainer .title {
-position:absolute;top:20%;
+position:absolute;
+max-width: 35%;
+top:20%;
 letter-spacing: 4px;
-color: #fff;
+color: #26778a;
+}
+.topContainer .title p {
+  font-size: 18px;
 }
 
 
