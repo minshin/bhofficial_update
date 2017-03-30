@@ -1,5 +1,5 @@
 /bootstrap/compiled.php
-storage
+./storage/log/*
 composer.phar
 .DS_Store
 .idea
