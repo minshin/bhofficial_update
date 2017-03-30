@@ -1,0 +1,37 @@
+1490880850a:1:{s:25:"service/serviceDetail.htm";a:10:{s:8:"fileName";s:25:"service/serviceDetail.htm";s:7:"content";s:467:"title="薄荷牙医-您身边的牙医专家"
+url="/serviceDetail"
+layout="second"
+description=""
+hidden="0"
+==
+
+<!-- 顶部背景图end-->
+<!-- 面包屑导航begin -->
+<div id="breadNav" style="margin-top:60px;">
+{% set type =['洗牙','种牙']%}
+  {% content 'breadNav' type=type[0] %}
+</div>
+<!-- 面包屑导航end -->
+
+<!-- 百科详情区域 begin -->
+
+<div id="serviceDetail">
+  {% partial 'baike/serviceDetailTop' %}
+</div>
+
+<!-- 百科详情区域 end -->
+";s:5:"mtime";i:1490678516;s:6:"markup";s:353:"<!-- 顶部背景图end-->
+<!-- 面包屑导航begin -->
+<div id="breadNav" style="margin-top:60px;">
+{% set type =['洗牙','种牙']%}
+  {% content 'breadNav' type=type[0] %}
+</div>
+<!-- 面包屑导航end -->
+
+<!-- 百科详情区域 begin -->
+
+<div id="serviceDetail">
+  {% partial 'baike/serviceDetailTop' %}
+</div>
+
+<!-- 百科详情区域 end -->";s:4:"code";N;s:5:"title";s:37:"薄荷牙医-您身边的牙医专家";s:3:"url";s:14:"/serviceDetail";s:6:"layout";s:6:"second";s:11:"description";s:0:"";s:6:"hidden";s:1:"0";}}

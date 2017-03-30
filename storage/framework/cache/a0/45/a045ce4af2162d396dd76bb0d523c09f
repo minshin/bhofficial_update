@@ -1,0 +1,76 @@
+1490880850a:1:{s:27:"priceDetail/priceDetail.htm";a:11:{s:8:"fileName";s:27:"priceDetail/priceDetail.htm";s:7:"content";s:699:"title="薄荷牙医-您身边的牙医专家"
+url="/priceDetail/:id"
+layout="priceDetail"
+description=""
+hidden="0"
+
+[boheservice]
+
+==
+
+
+
+
+
+{% set post = boheservice.post %}
+
+
+  <!-- 顶部背景图begin -->
+  <div id="topBg">
+    <div class="topImg">
+    <img src="{{ post.featured_images.first.getThumb('auto', 'auto') }}" alt="" style="width:100%;"> 
+    </div>
+  </div>
+  <!-- 顶部背景图end-->
+
+
+  <div id="content">
+  <div class="row">
+	  <div class="col-md-1 col-xs-1">
+	 
+	  </div>
+	    <div class="col-md-10 col-xs-10">
+	  {{post.content_html|raw}}
+	  </div>
+	    <div class="col-md-1 col-xs-1">
+	  
+	  </div>
+  </div>
+  </div>
+  
+
+
+<!-- 编辑内容begin -->
+
+<!-- 编辑内容end -->
+";s:5:"mtime";i:1490678516;s:6:"markup";s:558:"{% set post = boheservice.post %}
+
+
+  <!-- 顶部背景图begin -->
+  <div id="topBg">
+    <div class="topImg">
+    <img src="{{ post.featured_images.first.getThumb('auto', 'auto') }}" alt="" style="width:100%;"> 
+    </div>
+  </div>
+  <!-- 顶部背景图end-->
+
+
+  <div id="content">
+  <div class="row">
+	  <div class="col-md-1 col-xs-1">
+	 
+	  </div>
+	    <div class="col-md-10 col-xs-10">
+	  {{post.content_html|raw}}
+	  </div>
+	    <div class="col-md-1 col-xs-1">
+	  
+	  </div>
+  </div>
+  </div>
+  
+
+
+<!-- 编辑内容begin -->
+
+<!-- 编辑内容end -->";s:4:"code";N;s:5:"title";s:37:"薄荷牙医-您身边的牙医专家";s:3:"url";s:16:"/priceDetail/:id";s:6:"layout";s:11:"priceDetail";s:11:"description";s:0:"";s:6:"hidden";s:1:"0";s:11:"boheservice";a:0:{}}}

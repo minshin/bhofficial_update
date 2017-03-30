@@ -1,0 +1,204 @@
+1490880850a:1:{s:9:"index.htm";a:10:{s:8:"fileName";s:9:"index.htm";s:7:"content";s:2476:"title ='testIndexTitle'
+url ='/'
+layout='default'
+description="testdescription"
+hidden="0"
+==
+
+<?php
+function onTest()
+{
+    $this['result'] = input('value1') + input('value2');
+}
+function onSelect()
+{
+    $this['result'] = ‘我是返回的数据’;
+}
+function onDelete()
+{
+    $this['result'] = '我是返回的数据';
+}
+?>
+==
+
+<div class="second">
+  <a href="/second"class="btn btn-default">default按钮</a>
+</div>
+<div class="second">
+  <div class="container">
+  <!-- <form data-request="onTest" data-request-update="index:'#myDiv'" data-request-confirm="确定刷新吗？">
+      <div class="form-group">
+          <label for="userSigninLogin">userName</label>
+          <input
+                  name="login"
+                  type="text"
+                  class="form-control"
+                  id="userSigninLogin"
+                  placeholder="Enter your userName" />
+      </div>
+
+      <div class="form-group">
+          <label for="userSigninPassword">Password</label>
+          <input
+                  name="password"
+                  type="password"
+                  class="form-control"
+                  id="userSigninPassword"
+                  placeholder="Enter your password" />
+      </div>
+  <div class="btn" style="width:100%;margin:0 auto">
+  <button type="submit" class="btn btn-default" style="width:30%">Sign in</button>
+  </div>
+  </form> -->
+  <!-- AJAX enabled form -->
+  <form data-request="onTest" data-request-update="alert: '#myDiv'" data-request-redirect="/second">
+
+      <!-- Input two values -->
+      <input name="value1"> + <input name="value2">
+
+      <!-- Action button -->
+      <button type="submit">Calculate</button>
+
+  </form>
+
+<div class="container">
+  {% if this.param.id == '1' %}
+
+      <p>1</p>
+
+  {% elseif this.param.id == '2' %}
+
+      <p>2</p>
+
+      {% else %}
+
+          <p>qita</p>
+  {% endif %}
+</div>
+
+
+<button data-request="onSelect" id="select" class="btn btn-default">选择</button>
+<!-- </form> -->
+  <div data-request-data="id: 7">
+      <button data-request="onDelete">Delete</button>
+      <button data-request="onSave">Update</button>
+  </div>
+
+<div id="myDiv">
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<select id="parent">121213</select>
+</div>
+<div class="centerdiv" style="{width:100;height:100;text-align:center}">
+  我要居sads中
+</div>
+<div class="container">
+
+  <p class="p1">This is a paragraph.</p>
+  <button class="btn1">Toggle</button>
+</div>
+
+
+<div class="container1">
+
+</div>
+";s:5:"mtime";i:1490678516;s:6:"markup";s:2142:"<div class="second">
+  <a href="/second"class="btn btn-default">default按钮</a>
+</div>
+<div class="second">
+  <div class="container">
+  <!-- <form data-request="onTest" data-request-update="index:'#myDiv'" data-request-confirm="确定刷新吗？">
+      <div class="form-group">
+          <label for="userSigninLogin">userName</label>
+          <input
+                  name="login"
+                  type="text"
+                  class="form-control"
+                  id="userSigninLogin"
+                  placeholder="Enter your userName" />
+      </div>
+
+      <div class="form-group">
+          <label for="userSigninPassword">Password</label>
+          <input
+                  name="password"
+                  type="password"
+                  class="form-control"
+                  id="userSigninPassword"
+                  placeholder="Enter your password" />
+      </div>
+  <div class="btn" style="width:100%;margin:0 auto">
+  <button type="submit" class="btn btn-default" style="width:30%">Sign in</button>
+  </div>
+  </form> -->
+  <!-- AJAX enabled form -->
+  <form data-request="onTest" data-request-update="alert: '#myDiv'" data-request-redirect="/second">
+
+      <!-- Input two values -->
+      <input name="value1"> + <input name="value2">
+
+      <!-- Action button -->
+      <button type="submit">Calculate</button>
+
+  </form>
+
+<div class="container">
+  {% if this.param.id == '1' %}
+
+      <p>1</p>
+
+  {% elseif this.param.id == '2' %}
+
+      <p>2</p>
+
+      {% else %}
+
+          <p>qita</p>
+  {% endif %}
+</div>
+
+
+<button data-request="onSelect" id="select" class="btn btn-default">选择</button>
+<!-- </form> -->
+  <div data-request-data="id: 7">
+      <button data-request="onDelete">Delete</button>
+      <button data-request="onSave">Update</button>
+  </div>
+
+<div id="myDiv">
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<select id="parent">121213</select>
+</div>
+<div class="centerdiv" style="{width:100;height:100;text-align:center}">
+  我要居sads中
+</div>
+<div class="container">
+
+  <p class="p1">This is a paragraph.</p>
+  <button class="btn1">Toggle</button>
+</div>
+
+
+<div class="container1">
+
+</div>";s:4:"code";s:224:"function onTest()
+{
+    $this['result'] = input('value1') + input('value2');
+}
+function onSelect()
+{
+    $this['result'] = ‘我是返回的数据’;
+}
+function onDelete()
+{
+    $this['result'] = '我是返回的数据';
+}";s:5:"title";s:14:"testIndexTitle";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:11:"description";s:15:"testdescription";s:6:"hidden";s:1:"0";}}
